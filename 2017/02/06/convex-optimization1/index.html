@@ -84,14 +84,18 @@
 
 <meta name="description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念">
+在凸优化中，凸集是重要的基本概念，为此，引入以下概念
+
+直线的向量表示给定二维平面上">
 <meta property="og:type" content="article">
 <meta property="og:title" content="凸优化（一）：凸集的基本概念">
 <meta property="og:url" content="http://yoursite.com/2017/02/06/convex-optimization1/index.html">
 <meta property="og:site_name" content="Oliver's Notes">
 <meta property="og:description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念">
+在凸优化中，凸集是重要的基本概念，为此，引入以下概念
+
+直线的向量表示给定二维平面上">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/convex.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/hyperplane.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/norm_cone.png">
@@ -100,12 +104,14 @@
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/projective.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/separate.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/supporting.png">
-<meta property="og:updated_time" content="2017-02-10T15:31:16.000Z">
+<meta property="og:updated_time" content="2017-03-07T11:51:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="凸优化（一）：凸集的基本概念">
 <meta name="twitter:description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念">
+在凸优化中，凸集是重要的基本概念，为此，引入以下概念
+
+直线的向量表示给定二维平面上">
 <meta name="twitter:image" content="http://oky0w68xw.bkt.clouddn.com/convex.png">
 
 
@@ -384,9 +390,9 @@
 <p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸集等基本概念。</p>
 </blockquote>
 <p>在凸优化中，凸集是重要的基本概念，为此，引入以下概念</p>
-<a id="more"></a>
 <hr>
 <h3 id="直线的向量表示"><a href="#直线的向量表示" class="headerlink" title="直线的向量表示"></a>直线的向量表示</h3><p>给定二维平面上两定点：$\mathbf{a}(u_1,v_1),\mathbf{b}(u_2,v_2)$，则直线AB可以表示为<br>$$\vec{x}=\theta\cdot\vec{a}+(1-\theta)\cdot\vec{b},\ \theta\in R$$<br>若将$\theta$的范围限制到$[0,1]$，则表示线段AB</p>
+<a id="more"></a>
 <hr>
 <h3 id="几何体的向量表示"><a href="#几何体的向量表示" class="headerlink" title="几何体的向量表示"></a>几何体的向量表示</h3><p>以上的向量表示方法可以推广至高维：</p>
 <ul>

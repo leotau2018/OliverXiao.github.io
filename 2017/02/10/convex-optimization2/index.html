@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/epif.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/conj.png">
 <meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/Fenchel.png">
-<meta property="og:updated_time" content="2017-02-10T15:39:50.000Z">
+<meta property="og:updated_time" content="2017-03-07T11:50:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="凸优化（二）：凸函数的基本概念">
 <meta name="twitter:description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸函数等基本概念。
@@ -386,8 +386,8 @@
 <p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸函数等基本概念。</p>
 </blockquote>
 <p>在凸优化中，作为希望优化的目标函数，凸函数的性质的探究是极为重要的，下面给出凸函数的定义：</p>
-<a id="more"></a>
 <p> <strong>定义</strong>：若函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$的domain为凸集，且满足<br> $$\forall x,y \in \mathbf{dom} \ f, \theta\in[0,1],\  f(\theta x+(1-\theta)y)\leq \theta \ f(x)+(1-\theta)\ f(y)$$<br>那么称函数$\ f\ $为凸函数</p>
+<a id="more"></a>
 <p>从定义可以看出，凸函数其实是定义在$\mathbf{R}^n$上的泛函，且任意两点的连线段在其两点间函数图像上方：<br><img src="http://oky0w68xw.bkt.clouddn.com/chord.png" alt=""></p>
 <p>所以我们可以得到等价条件：</p>
 <p>函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$为凸函数当且仅当$\forall x,u \in \mathbf{dom} \ f, \ g(t)=f(x+tv)$为凸函数，由于函数$\ g:\mathbf{R}\rightarrow\mathbf{R}$,因此我们可以通过对$\mathbf{R}$上的泛函的性质去判断函数的凸性。</p>

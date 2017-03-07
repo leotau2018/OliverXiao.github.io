@@ -543,6 +543,7 @@
 <p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸函数等基本概念。</p>
 </blockquote>
 <p>在凸优化中，作为希望优化的目标函数，凸函数的性质的探究是极为重要的，下面给出凸函数的定义：</p>
+<p> <strong>定义</strong>：若函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$的domain为凸集，且满足<br> $$\forall x,y \in \mathbf{dom} \ f, \theta\in[0,1],\  f(\theta x+(1-\theta)y)\leq \theta \ f(x)+(1-\theta)\ f(y)$$<br>那么称函数$\ f\ $为凸函数</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/02/10/convex-optimization2/#more" rel="contents">
@@ -701,6 +702,8 @@
 <p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸集等基本概念。</p>
 </blockquote>
 <p>在凸优化中，凸集是重要的基本概念，为此，引入以下概念</p>
+<hr>
+<h3 id="直线的向量表示"><a href="#直线的向量表示" class="headerlink" title="直线的向量表示"></a>直线的向量表示</h3><p>给定二维平面上两定点：$\mathbf{a}(u_1,v_1),\mathbf{b}(u_2,v_2)$，则直线AB可以表示为<br>$$\vec{x}=\theta\cdot\vec{a}+(1-\theta)\cdot\vec{b},\ \theta\in R$$<br>若将$\theta$的范围限制到$[0,1]$，则表示线段AB</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/02/06/convex-optimization1/#more" rel="contents">
