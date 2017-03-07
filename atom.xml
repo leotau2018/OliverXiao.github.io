@@ -1,399 +1,28 @@
-<!doctype html>
-
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Oliver&#39;s Notes</title>
+  <subtitle>Be truth seeker</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
+  <link href="http://yoursite.com/"/>
+  <updated>2017-03-06T18:25:22.000Z</updated>
+  <id>http://yoursite.com/</id>
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+  <author>
+    <name>Oliver Xiao</name>
     
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python中的图模型实现</title>
+    <link href="http://yoursite.com/2017/03/06/python-graph/"/>
+    <id>http://yoursite.com/2017/03/06/python-graph/</id>
+    <published>2017-03-06T07:44:16.000Z</published>
+    <updated>2017-03-06T18:25:22.000Z</updated>
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Python,图模型,算法语言," />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Oliver's Notes" type="application/atom+xml" />
-
-
-
-
-
-
-
-
-
-<meta name="description" content="本文为本科课程《算法语言》的笔记，代码以及内容参考于Think Complexity, 2nd edition, Chapter 2
-
-什么是图（Graph）？ 图是离散的（discrete）、有关系（interconnected）的元素系统的一种表示方法
-一些名词：
-
-节点（nodes）：表示系统中的元素（elements）［图论中有时叫顶点vertex］
-边（edges）：表示元素间的关系（">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python中的图模型实现">
-<meta property="og:url" content="http://yoursite.com/2017/03/06/python-graph/index.html">
-<meta property="og:site_name" content="Oliver's Notes">
-<meta property="og:description" content="本文为本科课程《算法语言》的笔记，代码以及内容参考于Think Complexity, 2nd edition, Chapter 2
-
-什么是图（Graph）？ 图是离散的（discrete）、有关系（interconnected）的元素系统的一种表示方法
-一些名词：
-
-节点（nodes）：表示系统中的元素（elements）［图论中有时叫顶点vertex］
-边（edges）：表示元素间的关系（">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_10_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_20_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_27_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_31_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_42_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_70_0.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/output_72_0.png">
-<meta property="og:updated_time" content="2017-03-06T18:25:22.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中的图模型实现">
-<meta name="twitter:description" content="本文为本科课程《算法语言》的笔记，代码以及内容参考于Think Complexity, 2nd edition, Chapter 2
-
-什么是图（Graph）？ 图是离散的（discrete）、有关系（interconnected）的元素系统的一种表示方法
-一些名词：
-
-节点（nodes）：表示系统中的元素（elements）［图论中有时叫顶点vertex］
-边（edges）：表示元素间的关系（">
-<meta name="twitter:image" content="http://oky0w68xw.bkt.clouddn.com/output_10_0.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '6384246527434425000',
-      author: 'Oliver'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2017/03/06/python-graph/"/>
-
-
-
-
-
-  <title> Python中的图模型实现 | Oliver's Notes </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Oliver's Notes</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-    
-      <p class="site-subtitle">Be truth seeker</p>
-    
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/06/python-graph/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Oliver Xiao">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://p7.qhimg.com/t015cb9ea865cb21129.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Oliver's Notes">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Oliver's Notes" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Python中的图模型实现
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-06T15:44:16+08:00">
-                2017-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/06/python-graph/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/python-graph/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <blockquote>
+    <content type="html"><![CDATA[<blockquote>
 <p>本文为本科课程《算法语言》的笔记，代码以及内容参考于<a href="http://greenteapress.com/wp/complexity2" target="_blank" rel="external">Think Complexity, 2nd edition</a>, Chapter 2</p>
 </blockquote>
 <h3 id="什么是图（Graph）？"><a href="#什么是图（Graph）？" class="headerlink" title="什么是图（Graph）？"></a>什么是图（Graph）？</h3><p> 图是离散的（discrete）、有关系（interconnected）的元素系统的一种表示方法</p>
@@ -557,441 +186,283 @@ sunday
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">ns = [<span class="number">30</span>, <span class="number">100</span>, <span class="number">300</span>]</div><div class="line">ps = np.logspace(<span class="number">-2.5</span>, <span class="number">0</span>, <span class="number">11</span>)</div><div class="line"></div><div class="line">thinkplot.preplot(len(ns))</div><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> ns:</div><div class="line">    pstar = np.log(n) / n</div><div class="line">    thinkplot.vlines([pstar], <span class="number">0</span>, <span class="number">1</span>, color=<span class="string">'gray'</span>)</div><div class="line"></div><div class="line">    ys = [prob_connected(n, p) <span class="keyword">for</span> p <span class="keyword">in</span> ps]</div><div class="line">    thinkplot.plot(ps, ys, label=<span class="string">'n=%d'</span> % n)</div><div class="line"></div><div class="line">thinkplot.config(xlabel=<span class="string">'p'</span>, ylabel=<span class="string">'prob connected'</span>,</div><div class="line">                 xscale=<span class="string">'log'</span>, xlim=[ps[<span class="number">0</span>], ps[<span class="number">-1</span>]],</div><div class="line">                 loc=<span class="string">'upper left'</span>)</div></pre></td></tr></table></figure>
 <p><img src="http://oky0w68xw.bkt.clouddn.com/output_72_0.png" alt="png"></p>
 <p>当 <code>n</code> 增长的时候, 相变点变小且变换变得更陡峭。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-            <a href="/tags/图模型/" rel="tag"># 图模型</a>
-          
-            <a href="/tags/算法语言/" rel="tag"># 算法语言</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/10/convex-optimization2/" rel="next" title="凸优化（二）：凸函数的基本概念">
-                <i class="fa fa-chevron-left"></i> 凸优化（二）：凸函数的基本概念
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        <div class="ds-share flat" data-thread-key="2017/03/06/python-graph/"
-     data-title="Python中的图模型实现"
-     data-content=""
-     data-url="http://yoursite.com/2017/03/06/python-graph/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
-    </div>
-  </div>
-
-          
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+]]></content>
     
-      <div class="ds-thread" data-thread-key="2017/03/06/python-graph/"
-           data-title="Python中的图模型实现" data-url="http://yoursite.com/2017/03/06/python-graph/">
-      </div>
+    <summary type="html">
     
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://p7.qhimg.com/t015cb9ea865cb21129.jpg"
-               alt="Oliver Xiao" />
-          <p class="site-author-name" itemprop="name">Oliver Xiao</p>
-          <p class="site-description motion-element" itemprop="description">Be truth seeker</p>
-        </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/OliverXiao" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.facebook.com/profile.php?id=100012918523690" target="_blank" title="Facebook">
-                  
-                    <i class="fa fa-fw fa-facebook"></i>
-                  
-                  Facebook
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://twitter.com/XiaoTesi" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://nekolab.cn/" title="NekoLab" target="_blank">NekoLab</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://hohoweiya.xyz/cn/" title="Weiya" target="_blank">Weiya</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是图（Graph）？"><span class="nav-number">1.</span> <span class="nav-text">什么是图（Graph）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的前置准备"><span class="nav-number">2.</span> <span class="nav-text">Python的前置准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有向图（Directed-graph）"><span class="nav-number">3.</span> <span class="nav-text">有向图（Directed graph）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无向图（Undirected-graph）"><span class="nav-number">4.</span> <span class="nav-text">无向图（Undirected graph）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完全图（Complete-graph）"><span class="nav-number">5.</span> <span class="nav-text">完全图（Complete graph）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机图（Random-graphs）"><span class="nav-number">6.</span> <span class="nav-text">随机图（Random graphs）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通性（Connectivity）"><span class="nav-number">7.</span> <span class="nav-text">连通性（Connectivity）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通概率-（Probability-of-connectivity）"><span class="nav-number">8.</span> <span class="nav-text">连通概率 （Probability of connectivity）</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Oliver Xiao</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-  
+      &lt;blockquote&gt;
+&lt;p&gt;本文为本科课程《算法语言》的笔记，代码以及内容参考于&lt;a href=&quot;http://greenteapress.com/wp/complexity2&quot;&gt;Think Complexity, 2nd edition&lt;/a&gt;, Chapter 2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;什么是图（Graph）？&quot;&gt;&lt;a href=&quot;#什么是图（Graph）？&quot; class=&quot;headerlink&quot; title=&quot;什么是图（Graph）？&quot;&gt;&lt;/a&gt;什么是图（Graph）？&lt;/h3&gt;&lt;p&gt; 图是离散的（discrete）、有关系（interconnected）的元素系统的一种表示方法&lt;/p&gt;
+&lt;p&gt;一些名词：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;节点（nodes）：表示系统中的元素（elements）［图论中有时叫顶点vertex］&lt;/li&gt;
+&lt;li&gt;边（edges）：表示元素间的关系（interconnections）&lt;/li&gt;
+&lt;li&gt;有向图 （Directed graph）&lt;/li&gt;
+&lt;li&gt;无向图 （Undirected graph）&lt;/li&gt;
+&lt;li&gt;图论（Graph Theory）&lt;/li&gt;
+&lt;li&gt;图算法 （Graph Algorithms）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Python的前置准备&quot;&gt;&lt;a href=&quot;#Python的前置准备&quot; class=&quot;headerlink&quot; title=&quot;Python的前置准备&quot;&gt;&lt;/a&gt;Python的前置准备&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 这句话是非标准的python，用于ipthon或jupyter这样的系统中，表示绘图即刻自动展开。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;%matplotlib inline&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 这里把全部Warning过滤掉了. &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; warnings&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;warnings.filterwarnings(&lt;span class=&quot;string&quot;&gt;&#39;ignore&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; plt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# networkx是专门处理网络、图等数据结构的类.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; networkx &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; nx&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; np&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 颜色一般是每两位十六进制数代表一个0~255的整数, 表示一个颜色从最浅到最深。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 次序一般是#RRGGBB，分别代表红色、绿色和蓝色。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;COLORS = [&lt;span class=&quot;string&quot;&gt;&#39;#8dd3c7&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#ffffb3&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#bebada&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#fb8072&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#80b1d3&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#fdb462&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &lt;span class=&quot;string&quot;&gt;&#39;#b3de69&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#fccde5&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#d9d9d9&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#bc80bd&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#ccebc5&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;#ffed6f&#39;&lt;/span&gt;]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"oliverxiao"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+    </summary>
     
-      
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="图模型" scheme="http://yoursite.com/tags/%E5%9B%BE%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="算法语言" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
-
-
-
-
-
-
-
-
-
-
-
-
+  <entry>
+    <title>凸优化（二）：凸函数的基本概念</title>
+    <link href="http://yoursite.com/2017/02/10/convex-optimization2/"/>
+    <id>http://yoursite.com/2017/02/10/convex-optimization2/</id>
+    <published>2017-02-10T15:08:08.000Z</published>
+    <updated>2017-03-07T11:50:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸函数等基本概念。</p>
+</blockquote>
+<p>在凸优化中，作为希望优化的目标函数，凸函数的性质的探究是极为重要的，下面给出凸函数的定义：</p>
+<p> <strong>定义</strong>：若函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$的domain为凸集，且满足<br> $$\forall x,y \in \mathbf{dom} \ f, \theta\in[0,1],\  f(\theta x+(1-\theta)y)\leq \theta \ f(x)+(1-\theta)\ f(y)$$<br>那么称函数$\ f\ $为凸函数</p>
+<a id="more"></a>
+<p>从定义可以看出，凸函数其实是定义在$\mathbf{R}^n$上的泛函，且任意两点的连线段在其两点间函数图像上方：<br><img src="http://oky0w68xw.bkt.clouddn.com/chord.png" alt=""></p>
+<p>所以我们可以得到等价条件：</p>
+<p>函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$为凸函数当且仅当$\forall x,u \in \mathbf{dom} \ f, \ g(t)=f(x+tv)$为凸函数，由于函数$\ g:\mathbf{R}\rightarrow\mathbf{R}$,因此我们可以通过对$\mathbf{R}$上的泛函的性质去判断函数的凸性。</p>
+<p><strong>严格凸的定义</strong>（Strictly convex）:</p>
+<p>如果在凸函数的定义中，$\forall x\neq y$，不等号严格成立，即<br>$$f(\theta x+(1-\theta)y)&lt; \theta \ f(x)+(1-\theta)\ f(y)$$<br>则称函数$\ f\ $为严格凸函数</p>
+<hr>
+<h3 id="凸函数的延拓"><a href="#凸函数的延拓" class="headerlink" title="凸函数的延拓"></a>凸函数的延拓</h3><p>对于$\mathbf{dom} \ f\subset\mathbf{R}^n$的凸函数$\ f\ $，我们可以很自然地将其延拓至$\mathbf{R}^n$的全空间中：<br>$$ \tilde{f}(x)=\{<br>\begin{aligned}<br> \ \  f(x) \quad &amp; ,x\in \mathbf{dom} \ f \\<br>\infty \quad &amp;  ,x\notin \mathbf{dom} \ f<br>\end{aligned}<br>\<br>$$</p>
+<p>$\tilde{f}:\mathbf{R}^n\rightarrow R\bigcup {\infty}$为$\ f \ $的延拓（extended-value extension）</p>
+<blockquote>
+<p><strong>凸集的指示函数</strong>：假设凸集$C\subset\mathbf{R}^n$，考虑集合$C$上的凸函数$I_C$满足$I_C(x)=0,\ \forall x\in C$，函数$I_C$的延拓<br>$$\tilde{I}_C(x)=\{<br>\begin{aligned}<br>    0  &amp; \quad,x\in C \\<br>  \infty  &amp; \quad,x\notin C<br>\end{aligned}<br>\<br>$$<br>称为集合$C$的指示函数（Indicator function）</p>
+</blockquote>
+<p>引入指示函数$I_C$后，我们可以将任意凸函数的延拓写成$\tilde{f}=f+\tilde{I}_C$</p>
+<hr>
+<h3 id="一阶条件"><a href="#一阶条件" class="headerlink" title="一阶条件"></a>一阶条件</h3><p>假设泛函$\ f\ $一阶可微（First-order differentiable），即其梯度$\nabla f$在$\mathbf{dom} \ f\ $的每点处存在，且$\mathbf{dom} \ f\ $为开集，那么$\ f\ $为凸函数当且仅当$\mathbf{dom} \ f\ $为凸集且<br>$$\forall x,y \in \mathbf{dom} \ f\ ,\quad  f(y)\geq f(x)+\nabla f(x)^T(y-x)$$<br>其几何意义可以由下图表示：其一阶Taylor估计为该函数的全局<strong>下</strong>估计<br><img src="http://oky0w68xw.bkt.clouddn.com/first-order.png" alt=""></p>
+<p>对于严格凸泛函，那么条件改为$\quad \forall x\neq y, \quad f(y)&gt; f(x)+\nabla f(x)^T(y-x)$</p>
+<p><strong>一阶条件的证明</strong>：</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/proof1.png" alt=""></p>
+<hr>
+<h3 id="二阶条件"><a href="#二阶条件" class="headerlink" title="二阶条件"></a>二阶条件</h3><p>假设泛函$\ f\ $二阶可微，即，其Hessian矩阵$\nabla^2 f$在在$\mathbf{dom} \ f\ $的每点处存在，且$\mathbf{dom} \ f\ $为开集，那么函数$\ f\ $为凸函数当且仅当$\mathbf{dom} \ f\ $为凸集，且其Hessian矩阵$\nabla^2 f$半正定：<br> $$\forall x\in \mathbf{dom} \ f\ ,\quad\nabla^2 f\geq 0$$</p>
+<p><strong>二阶条件的证明</strong>：同一阶条件一样，Taylor展开至二阶即可证得</p>
+<p>对于$\mathbf{R}$上的函数，二阶条件可以退化为$f’’(x)\geq 0$且$\mathbf{dom} \ f\ $为区间</p>
+<p>二阶条件的几何解释为其函数图像在定义域中每点处均有向上的正弯曲（positive upward curvature）</p>
+<p>同理可写出凹函数的二阶条件：<br>假设泛函$\ f\ $二阶可微，即，其Hessian矩阵$\nabla^2 f$在在$\mathbf{dom} \ f\ $的每点处存在，且$\mathbf{dom} \ f\ $为开集，那么函数$\ f\ $为凹函数当且仅当$\mathbf{dom} \ f\ $为凸集，且其Hessian矩阵$\nabla^2 f$半正定：<br> $$\forall x\in \mathbf{dom} \ f\ ,\quad\nabla^2 f\leq 0$$</p>
+<p>一致凸的二阶充分条件：其Hessian矩阵$\nabla^2 f$正定，即$$\forall x\in \mathbf{dom} \ f\ ,\quad\nabla^2 f&gt; 0$$<br>该条件并不是必要条件：如$f(x)=x^4$是一致凸函数，但其二阶导函数$f’’(x)=12 x^2$在$x=0$处等于$0$</p>
+<hr>
+<h3 id="凸函数举例"><a href="#凸函数举例" class="headerlink" title="凸函数举例"></a>凸函数举例</h3><ul>
+<li>指数函数（Exponential）     $$f(x)=e^{ax}$$</li>
+<li>幂函数 （Powers）    $$f(x)=x^a, x\in R^{+}, a\geq 1 \  or \ a\leq 0$$</li>
+<li>负对数函数 （Negative logarithm）    $$f(x)=-\ln(x)$$</li>
+<li>负熵函数（Negative entropy）    $$f(x)=x\ln(x)$$</li>
+<li>范数函数    （Norms）    $$f(x)=\Vert x\Vert$$</li>
+<li>最大值函数 （Max function）    $$f(\vec{x})=\max\{x_1,\cdots,x_n\}$$</li>
+<li>指数线性函数  （Log-sum-exp）$$f(x)=\ln(e^{x_1}+\cdots+e^{x_n})$$<br>指数线性函数可被作为可微（实际上，可解析）的函数近似逼近最大值函数$\max\{x_1,\cdots,x_n\}$，因为有如下不等式成立：<br>$$\max\{x_1,\cdots,x_n\}\leq \ln(e^{x_1}+\cdots+e^{x_n})\leq \max\{x_1,\cdots,x_n\}+\log n, \quad \forall x\in\mathbf{R}^n$$<br>且当$x_1=x_2=\cdots=x_n$时，第二个不等式是紧的</li>
+</ul>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/log-sum-exp.png" alt=""></p>
+<hr>
+<h3 id="下水平集与上水平集"><a href="#下水平集与上水平集" class="headerlink" title="下水平集与上水平集"></a>下水平集与上水平集</h3><p>函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$的下$\alpha$水平集（$\alpha-sublevel \ set$）定义如下:<br>$$C_{\alpha}=\{x\in\mathbf{dom}\ f \mid f(x)\leq \alpha\}$$</p>
+<p>凸函数的$\alpha$分段集为凸集，这点是显而易见的，根据下面的不等式可以推得<br>$$f(\theta x+(1-\theta)y)\leq \theta \ f(x)+(1-\theta)\ f(y)\leq \theta\alpha+(1-\theta)\alpha\leq\alpha$$</p>
+<p>同理可以定义上$\alpha$水平集（$\alpha -superlevel\ set$），对于凹函数，其上$\alpha$水平集为凹集</p>
+<hr>
+<h3 id="上镜图与亚图"><a href="#上镜图与亚图" class="headerlink" title="上镜图与亚图"></a>上镜图与亚图</h3><p>函数$\ f(x)$ 的图像：$\{(x,f(x))\mid x\in \mathbf{dom}\ f\}$</p>
+<p>函数的上镜图（Epigraph）定义为<br>$$\mathbf{epi}\ f=\{(x,t)\mid x\in \mathbf{dom}\ f, t\geq f(x)\}$$</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/epigraph.png" alt=""></p>
+<p>同理可以定义函数的亚图（hypograph）：<br>$$\mathbf{hypo}\ f=\{(x,t)\mid x\in \mathbf{dom}\ f, t\leq f(x)\}$$</p>
+<p>关于凸函数的很多结论可以通过上镜图来从几何意义上进行证明，如凸函数的一阶条件，我们可以通过如下的几何方法进行证明：</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/epi.png" alt=""></p>
+<hr>
+<h3 id="Jensen不等式及其延伸"><a href="#Jensen不等式及其延伸" class="headerlink" title="Jensen不等式及其延伸"></a>Jensen不等式及其延伸</h3><p>凸函数定义中的最基本的不等式<br>$$f(\theta x+(1-\theta)y)\leq \theta\ f(x)+ (1-\theta)\ f(y)$$<br>有时又称Jensen不等式</p>
+<p>该不等式很容易地可以延伸至$k$点的形式：如果函数$\ f$为凸函数，$x_1,x_2,\cdots,x_k$，$\theta_1,\theta_2,\cdots,\theta_k\geq 0$且$\sum_{i=1}^{k}\theta_i=1$，那么有<br>$$f(\theta_1 x_1+\theta_2 x_2+\cdots+\theta_k x_k)\leq \theta_1 f(x_1)+\theta_2 f(x_2)+\cdots+\theta_k f(x_k)$$</p>
+<p>还可以延伸到无穷和与积分的形式，比如，如果$\forall x\in S\subset\mathbf{dom} \ f,\ p(x)\geq 0$，且$\int_{S}p(x)dx=1$，那么<br>$$f\left(\int_{S}p(x)xdx \right)\leq \int_{S}f(x)p(x)dx$$</p>
+<p>更为一般的，我们可以在$\mathbf{dom} \ f$上定义概率测度。如果$x$是定义在$\mathbf{dom}\ f$上的随机变量且$\ f$为凸函数，那么我们有<br>$$f(\mathbf{E} x)\leq\mathbf{E}f(x)$$</p>
+<p>许多著名的不等式都是由Jensen不等式在取特定的凸函数$\ f$下延伸出来的，如均值不等式、$H\ddot{o}lder$不等式</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/Holder.png" alt=""></p>
+<hr>
+<h3 id="保凸算子"><a href="#保凸算子" class="headerlink" title="保凸算子"></a>保凸算子</h3><p> 同凸集一样，我们也可以讨论保持凸性的算子，将凸函数映射到凸函数，下面介绍常见重要的几种保凸算子</p>
+<ul>
+<li><p><strong>凸函数的非负加权和</strong>（Nonnegative weighted sums）<br>  $$f=w_1 f_1+w_2 f_2+\cdots+w_m f_m$$<br>  同样我们可以推广到无限和与积分：如果$\forall y\in\mathcal{A},\ f(x,y)$对于$x$是凸的，且$\forall y\in\mathcal{A},\ w(y)\geq 0$，那么<br>  $$g(x)=\int_{\mathcal{A}}w(y)f(x,y)dy$$<br>是凸函数</p>
+</li>
+<li><p><strong>凸函数和仿射函数的复合函数</strong>（Composition with an affine mapping）</p>
+</li>
+</ul>
+<p>假设$\ f:\mathbf{R}^n\rightarrow\mathbf{R}$是凸函数，$A \in \mathbf{R}^{n\times m}$，且 $b\in \mathbf{R}^n$，定义$g:\mathbf{R}^m\rightarrow \mathbf{R}$<br> $$ g(x) = f(Ax + b),\quad \mathbf{dom}\ g = \{x\mid Ax+b ∈ \mathbf{dom}\ f\}$$<br>那么$\ g(x)$为凸函数；如果$\ f$为凹函数，则$\ g(x)$为凹函数</p>
+<ul>
+<li><strong>凸函数的逐点最大值、逐点上确界</strong><br>$$f(x)=\max(f_1(x),f_2(x),\cdots, f_m(x))$$ $$f(x)=\sup_{y\in A}g(x,y)$$</li>
+</ul>
+<p>这里可以用上镜图的方法去证明其的保凸性，如下图<br>$$\mathbf{epi}\ g=\bigcap_{y\in\mathcal{A}}\mathbf{epi}\ f(\cdot,y)$$<br><img src="http://oky0w68xw.bkt.clouddn.com/epif.png" alt=""></p>
+<hr>
+<h3 id="共轭函数"><a href="#共轭函数" class="headerlink" title="共轭函数"></a>共轭函数</h3><p>最后我们给出共轭函数（conjugate function）的定义：</p>
+<p><strong>定义</strong>：假设$\ f: \mathbf{R}^n \rightarrow \mathbf{R}$， 函数$\ f$的共轭函数 $\ f^{*}: \mathbf{R}^n \rightarrow \mathbf{R}$定义为<br>$$f^{*}(y)=\sup_{x\in\mathbf{dom}\ f} (y^Tx-f(x))$$</p>
+<p>显然，定义式的右端是关于$y$的仿射函数，对它们逐点求上确界，得到的函数$\ f^{*}(y)$一定是凸函数，因此共轭函数必为凸函数</p>
+<p><strong>共轭函数由来</strong>：凸函数的共轭函数的共轭函数是其本身</p>
+<p><strong>对共轭函数的理解</strong>：如果函数$\ f$可微，对于每一固定的$y$，在满足$\ f’(x)=y$的点$x$处差值最大，如图<br><img src="http://oky0w68xw.bkt.clouddn.com/conj.png" alt=""></p>
+<hr>
+<h3 id="Fenchel不等式"><a href="#Fenchel不等式" class="headerlink" title="Fenchel不等式"></a>Fenchel不等式</h3><p>由共轭函数的定义，可以得到Fenchel不等式</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/Fenchel.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的&lt;em&gt;Convex Optimization&lt;/em&gt;，在本文主要介绍凸函数等基本概念。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在凸优化中，作为希望优化的目标函数，凸函数的性质的探究是极为重要的，下面给出凸函数的定义：&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;定义&lt;/strong&gt;：若函数$\ f:\mathbf{R}^n\rightarrow \mathbf{R}$的domain为凸集，且满足&lt;br&gt; $$\forall x,y \in \mathbf{dom} \ f, \theta\in[0,1],\  f(\theta x+(1-\theta)y)\leq \theta \ f(x)+(1-\theta)\ f(y)$$&lt;br&gt;那么称函数$\ f\ $为凸函数&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
+  <entry>
+    <title>凸优化（一）：凸集的基本概念</title>
+    <link href="http://yoursite.com/2017/02/06/convex-optimization1/"/>
+    <id>http://yoursite.com/2017/02/06/convex-optimization1/</id>
+    <published>2017-02-06T15:12:58.000Z</published>
+    <updated>2017-03-07T11:51:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸集等基本概念。</p>
+</blockquote>
+<p>在凸优化中，凸集是重要的基本概念，为此，引入以下概念</p>
+<hr>
+<h3 id="直线的向量表示"><a href="#直线的向量表示" class="headerlink" title="直线的向量表示"></a>直线的向量表示</h3><p>给定二维平面上两定点：$\mathbf{a}(u_1,v_1),\mathbf{b}(u_2,v_2)$，则直线AB可以表示为<br>$$\vec{x}=\theta\cdot\vec{a}+(1-\theta)\cdot\vec{b},\ \theta\in R$$<br>若将$\theta$的范围限制到$[0,1]$，则表示线段AB</p>
+<a id="more"></a>
+<hr>
+<h3 id="几何体的向量表示"><a href="#几何体的向量表示" class="headerlink" title="几何体的向量表示"></a>几何体的向量表示</h3><p>以上的向量表示方法可以推广至高维：</p>
+<ul>
+<li>三维平面：$\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\theta_3\cdot\vec{a_3}, \ \ \theta_1+\theta_2+\theta_3=1, \theta_1,\theta_2,\theta_3\in R$</li>
+<li>三角形： $\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\theta_3\cdot\vec{a_3}, \ \ \theta_1+\theta_2+\theta_3=1, \theta_1,\theta_2,\theta_3\in [0,1]$</li>
+<li>超平面： $\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\cdots+\theta_k\cdot\vec{a_k}, \ \ \theta_1+\theta_2+\cdots+\theta_k=1, \theta_1,\theta_2,\cdots,\theta_k\in R$</li>
+<li>超几何体：$\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\cdots+\theta_k\cdot\vec{a_k}, \ \ \theta_1+\theta_2+\cdots+\theta_k=1, \theta_1,\theta_2,\cdots,\theta_k\in [0,1]$</li>
+</ul>
+<hr>
+<h3 id="仿射集"><a href="#仿射集" class="headerlink" title="仿射集"></a>仿射集</h3><p>以上的表示方法可以引入几何学中一个重要的概念，仿射集（Affine set）：</p>
+<p> <strong>定义</strong>：通过集合$C$的任意两个不同点的直线仍在集合$C$内，则称集合$C$是仿射集</p>
+<p> $$\forall x_1,x_2\in C,\forall \theta\in R, x=\theta\cdot x_1+(1-\theta)\cdot x_2\in C$$</p>
+<p>仿射集的例子：</p>
+<ul>
+<li>直线、平面</li>
+<li>超平面：$\{x|Ax=b\}$</li>
+</ul>
+<hr>
+<h3 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h3><p>下面可以引入凸集概念，其定义有两种形式，两种形式是等价的</p>
+<ul>
+<li>两点定义：集合$C$内任意两点间的线段均在集合$C$内，则称集合$C$是凸集<br>$$\forall x_1,x_2\in C, \forall\theta\in[0,1], x=\theta\cdot x_1+(1-\theta)\cdot x_2\in C$$</li>
+<li>$k$点定义：<br>$$\forall x_1, x_2, \cdots, x_k \in C, \forall \theta_{i}\in [0,1], \sum_{i=1}^{k}\theta_{i}=1, x=\sum_{i=1}^{k}\theta_{i} x_i \in C$$</li>
+</ul>
+<p>根据仿射集和凸集的定义，我们知道：仿射集一定是凸集</p>
+<hr>
+<h3 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h3><p><strong>定义</strong>：集合C的所有点的凸组合形成的集合，叫做集合$C$的凸包（Convex hull）</p>
+<p>  $$\mathbf{conv} \ \  C =\{\sum_{i=1}^{k}\theta_{i}x_{i}|x_{i}\in C, \theta_i \geq 0, \sum_{i=1}^{k}\theta_i =1\}$$</p>
+<p>推论：集合凸包是能包含$C$的最小凸集</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/convex.png" alt="convex hull"></p>
+<hr>
+<h3 id="超平面和半空间"><a href="#超平面和半空间" class="headerlink" title="超平面和半空间"></a>超平面和半空间</h3><ul>
+<li>超平面（hyperplane）<br>$$<br>\{x\ | \ a^{T}x=b\}<br>$$<br>$a$是其法向量</li>
+<li>半空间（halfspace）<br>$$<br>\{x\ | \ a^{T}x\leq b\}\quad\quad<br>\{x\ | \ a^{T}x\geq b\}<br>$$<br><img src="http://oky0w68xw.bkt.clouddn.com/hyperplane.png" alt="hyperplane"></li>
+</ul>
+<hr>
+<h3 id="欧式球和椭球"><a href="#欧式球和椭球" class="headerlink" title="欧式球和椭球"></a>欧式球和椭球</h3><ul>
+<li>欧式球<br>$$<br>B(x_c,r)=\{x \ |\ \Vert x-x_c\Vert_2 \leq r \}=\{x \ |(x-x_c)^{T}(x-x_c) \leq r^2 \}<br>$$<br>​</li>
+<li>椭球<br>$$<br>E=\{x\ | (x-x_c)^T P(x-x_c)\leq r^2\}, 其中P为对称正定阵<br>$$</li>
+</ul>
+<hr>
+<h3 id="范数球和范数锥"><a href="#范数球和范数锥" class="headerlink" title="范数球和范数锥"></a>范数球和范数锥</h3><p>我们可以将欧式空间的二范数进行推广，得到广义的范数几何体</p>
+<ul>
+<li>范数球（Norm Ball）<br>  $$<br>  B(x_c,r)=\{x \ |\ \Vert x-x_c\Vert \leq r \}<br>  $$</li>
+<li>范数锥（Norm Cone）<br>  $$<br>  \{(x,t) \ |\ \Vert x\Vert \leq t \}<br>  $$<br><img src="http://oky0w68xw.bkt.clouddn.com/norm_cone.png" alt="Norm cone"></li>
+</ul>
+<hr>
+<h3 id="多面体"><a href="#多面体" class="headerlink" title="多面体"></a>多面体</h3><p>引入以上概念后，我们可以如下去定义多面体（polyhedron）：</p>
+<p><strong>定义</strong>：多面体是有限个半空间和超平面的交集，即<br>$$\mathcal{P}=\{ a_j^Tx\leq b_j, j=1,2,\cdots,m,\ \  c_i^T x=d_i, i=1,2,\cdots,p \}$$</p>
+<ul>
+<li>仿射集(如超平面、直线)、射线、线段、半空间都是多面体</li>
+<li>多面体是凸集</li>
+<li>有界多面体叫<em>多胞形</em>（polytope）<br><img src="http://oky0w68xw.bkt.clouddn.com/polyherdon2.png" alt="polyhedron"></li>
+</ul>
+<hr>
+<h3 id="保凸运算"><a href="#保凸运算" class="headerlink" title="保凸运算"></a>保凸运算</h3><p>引入凸集的概念后，自然地想研究集合间的映射算子与凸集的关系，特别地是保持凸性的算子，即将凸集映射为凸集的算子，下面给出4个保凸算子（Operations that preserve convexity）</p>
+<ul>
+<li>集合的交运算（Intersection）<br>$$\bigcap_{\alpha\in\mathcal{A}}S_{\alpha}$$</li>
+<li>仿射变换（Affine functions）$$f(x)=Ax+b$$</li>
+<li><p>透视变换（Perspective functions）</p>
+<p><strong>定义</strong>：$$ P:\mathbf{R}^{n+1}\rightarrow\mathbf{R}^{n}, \ \mathbf{dom} \ P=\mathbf{R}^{n}\times R_{+}$$<br>$$(x_1,x_2,\cdots,x_n,t)\rightarrow(\frac{x_1}{t},\frac{x_2}{t},\cdots,\frac{x_n}{t}), t&gt;0$$<br>从代数角度，透视变换相当于对原向量进行标准化化使得最后一个分量值为1，并去掉了最后一个分量；从几何角度，三维平面内透视变换相当于小孔成像的原理，如下图所示<br><img src="http://oky0w68xw.bkt.clouddn.com/pinhole.png" alt="pin_hole"></p>
+</li>
+<li><p>线性分式变换（投射变换）（Linear-fractional functions）</p>
+<p><strong>定义</strong>：线性分式函数是仿射变换和透视变换的复合变换</p>
+</li>
+</ul>
+<p>$假设仿射变换\ g:\mathbf{R}^{n}\rightarrow\mathbf{R}^{m+1}$<br>$$ g(x)=\begin{bmatrix}A\\ c^{T}\end{bmatrix}x+\begin{bmatrix}b\\ d\end{bmatrix}$$<br>$\ 其中A\in \mathbf{R}^{m\times n},b\in\mathbf{R}^{m},c\in\mathbf{R}^{n},d\in\mathbf{R}$</p>
+<p>  $那么\ f:\mathbf{R}^{n}\rightarrow\mathbf{R}^{m}定义为f=P \circ g，即$<br>  $$f(x)=\frac{Ax+b}{c^Tx+d},\quad \mathbf{dom}\ f=\{x|c^Tx+d&gt;0\}$$<br>  <strong>投影理解</strong>（Projective Interpretation）:<br>  我们可以将线性分式变换写成矩阵形式，记<br>  $$Q=\left[\begin{matrix}<br>  A &amp; b\\<br>  c^T &amp; d<br>  \end{matrix}\right]\in\mathbf{R}^{(m+1)\times(n+1)}<br>  $$<br>将$\ Q\ $乘上$(x,1)$可以得到$\ Q(x,1)=(Ax+b,c^Tx+d)$，再通过对最后一个分量标准化得到$\ \left(\ f(x),1\ \right)\ $. 定义如下从$R^{n}$的元素到$R^{n+1}$中的集合的算子$$\mathcal{P}(x)=\{t\cdot(x,1)|t&gt;0\}$$，则线性分式变换$f$可以写作<br>$$f(x)=\mathcal{P}^{-1}(Q\mathcal{P}(x))$$<br>这是一个投影算子，下图给出一个例子<br><img src="http://oky0w68xw.bkt.clouddn.com/projective.png" alt="projective"></p>
+<hr>
+<h3 id="分割超平面"><a href="#分割超平面" class="headerlink" title="分割超平面"></a>分割超平面</h3><p><strong>定义</strong>：设$C$和$D$是两集合，若存在超平面$a^{T}x=b$使得，<br>$$\forall x\in C,a^Tx\leq b\ 且\  \forall x\in D, a^Tx\geq b$$<br>则称$\{x|a^Tx=b\}$为集合$C,D$的分割超平面（Separating hyperplane）</p>
+<p><strong>定理</strong>：两个<strong>不相交的凸集</strong>必定有分割超平面<br><img src="http://oky0w68xw.bkt.clouddn.com/separate.png" alt=""></p>
+<p>分割超平面的构造：两集合最近两点连线的中垂面</p>
+<p>最优分割超平面的构造（SVM：Support Vector Machine）</p>
+<hr>
+<h3 id="支撑超平面"><a href="#支撑超平面" class="headerlink" title="支撑超平面"></a>支撑超平面</h3><p><strong>定义</strong>：设集合$C$，$x_0$为$C$边界上的点。若存在$a\neq0$, 满足对任意$x\in C$,都有$a^Tx\leq a^Tx_0$成立,则称超平面$\{x|a^Tx\leq a^Tx_0\}$为集合$C$在点$x_0$处的支撑超平面（Supporting hyperplane）</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/supporting.png" alt=""></p>
+<p><strong>定理</strong>：凸集边界上任意一点，均存在支撑超平面；反之，若一个闭的非中空（内部点不为空）集合，在边界上的任意一点均存在支撑超平面，则必为凸集</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的&lt;em&gt;Convex Optimization&lt;/em&gt;，在本文主要介绍凸集等基本概念。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在凸优化中，凸集是重要的基本概念，为此，引入以下概念&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;直线的向量表示&quot;&gt;&lt;a href=&quot;#直线的向量表示&quot; class=&quot;headerlink&quot; title=&quot;直线的向量表示&quot;&gt;&lt;/a&gt;直线的向量表示&lt;/h3&gt;&lt;p&gt;给定二维平面上两定点：$\mathbf{a}(u_1,v_1),\mathbf{b}(u_2,v_2)$，则直线AB可以表示为&lt;br&gt;$$\vec{x}=\theta\cdot\vec{a}+(1-\theta)\cdot\vec{b},\ \theta\in R$$&lt;br&gt;若将$\theta$的范围限制到$[0,1]$，则表示线段AB&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
-
+  <entry>
+    <title>Oliver&#39;s Notes 新开始</title>
+    <link href="http://yoursite.com/2017/01/30/hello-world/"/>
+    <id>http://yoursite.com/2017/01/30/hello-world/</id>
+    <published>2017-01-30T07:44:16.000Z</published>
+    <updated>2017-03-07T11:35:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>历经各种磨难，终于将自己的blog用hexo搭载好，挂在了Github上。虽然其中很多配置并不是很懂，但是也初步了解其原理：将本地的静态网站放在Github的Personal Page作为自己的blog。</p>
+<p>以前在wordpress.com上建站，发现.com没有MathJax插件，写不了数学公式，加载图片也甚是麻烦，故打算关闭原来的blog，开启新的Oliver’s Notes。</p>
+<p>虽然我明白这个网站并没有什么人会去看，但是希望能督促自己多读点书，多写点东西。既然想做一个Geek，就要拿出一个Geek的样子。希望未来的我能一直坚持下去，不忘初心。</p>
+<p>本站记录些学习笔记，生活感悟（吐槽）等，更新频率不定。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;历经各种磨难，终于将自己的blog用hexo搭载好，挂在了Github上。虽然其中很多配置并不是很懂，但是也初步了解其原理：将本地的静态网站放在Github的Personal Page作为自己的blog。&lt;/p&gt;
+&lt;p&gt;以前在wordpress.com上建站，发现.com没
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-  
-
-  
-
-
-</body>
-</html>
+</feed>
