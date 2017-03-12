@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-06T18:25:22.000Z</updated>
+  <updated>2017-03-12T16:08:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写在大三下</title>
+    <link href="http://yoursite.com/2017/03/12/juniorthinking/"/>
+    <id>http://yoursite.com/2017/03/12/juniorthinking/</id>
+    <published>2017-03-12T15:25:22.000Z</published>
+    <updated>2017-03-12T16:08:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.</p>
+</blockquote>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/sky.jpg" alt=""></p>
+<p>最近感觉同级的人们情绪都很紧张，自己也不例外，毕竟在这个人生中可能比高三还要重要的阶段，每个人都会在无数的可能前暗自发愁。</p>
+<p>有朋友GPA不高，保不了研，成为了自习室的考研大军中的一员；有朋友为了争取最后的保研的机会，夜以继日地学习以在学期末取得好的成绩；出国党们，考着GT，刷着GPA，看着paper，做着实习……</p>
+<p>而我就是万千出国党中的一份子，背着可能一辈子也不会再用到的GRE单词，每天看着琦叔的励志鸡汤，每天单词、paper、codes充斥整个大脑。大概一星期前，刚开学的我，还踌躇满志，立志在这学期要拿得下GT，看得了paper，码得了代码，刷得了GPA。但现实总是残酷的，我发现我做不到6点起床背单词，做不到上课精神饱满，做不到一星期3篇paper的阅读……</p>
+<blockquote>
+<p>人在学期初，总是能极大地高估自己的潜力的。</p>
+</blockquote>
+<p>于是在这个星期日，脑子和身子还是罢了工，昏昏沉沉睡了很久。</p>
+<blockquote>
+<p>人醒了，总是能想通很多事。</p>
+</blockquote>
+<p>其实，往往疲惫的感觉，更多地来源于自己和自己过不去。别人一天能背300个单词，而自己一天200个都很难背下来；别人能看数不尽的paper，甚至本科都能发得了paper，而自己却很多paper都看不懂……极大多数的疲惫感，来自于和别人的比较。</p>
+<blockquote>
+<p>人总是会盯住别人的闪光点，认为自己一无是处，而这种一无是处的错觉就会给你的精神以及身体带来消极的影响。</p>
+</blockquote>
+<p>所以最近我和许多学弟学妹交流，我说的最多的一句话就是：“大学中厉害的人太多了，如果你总是看着厉害的人而否定自己，你永远会止步不前，成为不了别人眼中厉害的人。”</p>
+<p>写下这篇随笔，只是想在开学初警告自己，专注走自己的路，做到无怨无悔即是好。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.&lt;/p&gt;
+&lt;/block
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="吐槽" scheme="http://yoursite.com/tags/%E5%90%90%E6%A7%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Python中的图模型实现</title>

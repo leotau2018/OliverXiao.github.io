@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数学,机器学习," />
+  <meta name="keywords" content="随笔,吐槽," />
 
 
 
@@ -84,37 +84,30 @@
 
 
 
-<meta name="description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
+<meta name="description" content="Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念
 
-直线的向量表示给定二维平面上">
+最近感觉同级的人们情绪都很紧张，自己也不例外，毕竟在这个人生中可能比高三还要重要的阶段，每个人都会在无数的可能前暗自发愁。
+有朋友GPA不高，保不了研，成为了自习室的考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="凸优化（一）：凸集的基本概念">
-<meta property="og:url" content="http://yoursite.com/2017/02/06/convex-optimization1/index.html">
+<meta property="og:title" content="写在大三下">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/juniorthinking/index.html">
 <meta property="og:site_name" content="Oliver's Notes">
-<meta property="og:description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
+<meta property="og:description" content="Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念
 
-直线的向量表示给定二维平面上">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/convex.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/hyperplane.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/norm_cone.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/polyherdon2.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/pinhole.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/projective.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/separate.png">
-<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/supporting.png">
-<meta property="og:updated_time" content="2017-03-07T11:51:20.000Z">
+最近感觉同级的人们情绪都很紧张，自己也不例外，毕竟在这个人生中可能比高三还要重要的阶段，每个人都会在无数的可能前暗自发愁。
+有朋友GPA不高，保不了研，成为了自习室的考">
+<meta property="og:image" content="http://oky0w68xw.bkt.clouddn.com/sky.jpg">
+<meta property="og:updated_time" content="2017-03-12T16:08:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凸优化（一）：凸集的基本概念">
-<meta name="twitter:description" content="凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的Convex Optimization，在本文主要介绍凸集等基本概念。
+<meta name="twitter:title" content="写在大三下">
+<meta name="twitter:description" content="Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.
 
-在凸优化中，凸集是重要的基本概念，为此，引入以下概念
 
-直线的向量表示给定二维平面上">
-<meta name="twitter:image" content="http://oky0w68xw.bkt.clouddn.com/convex.png">
+最近感觉同级的人们情绪都很紧张，自己也不例外，毕竟在这个人生中可能比高三还要重要的阶段，每个人都会在无数的可能前暗自发愁。
+有朋友GPA不高，保不了研，成为了自习室的考">
+<meta name="twitter:image" content="http://oky0w68xw.bkt.clouddn.com/sky.jpg">
 
 
 
@@ -142,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/06/convex-optimization1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/juniorthinking/"/>
 
 
 
 
 
-  <title> 凸优化（一）：凸集的基本概念 | Oliver's Notes </title>
+  <title> 写在大三下 | Oliver's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/06/convex-optimization1/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/juniorthinking/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Oliver Xiao">
@@ -328,7 +321,7 @@
             
             
               
-                凸优化（一）：凸集的基本概念
+                写在大三下
               
             
           </h1>
@@ -343,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-06T23:12:58+08:00">
-                2017-02-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T23:25:22+08:00">
+                2017-03-12
               </time>
             
 
@@ -366,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
                   </a>
                 </span>
 
@@ -384,8 +377,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/06/convex-optimization1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/06/convex-optimization1/" itemprop="commentCount"></span>
+                <a href="/2017/03/12/juniorthinking/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/juniorthinking/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,88 +405,25 @@
 
       
         <blockquote>
-<p>凸优化（Convex Optimization）作为机器学习中重要的数学内容，在本科阶段课程中几乎没有涉及，于是在学习机器学习的过程中，我学习了凸优化的部分内容，参考书籍为Stephen Boyd, Lieven Vandenberghe的<em>Convex Optimization</em>，在本文主要介绍凸集等基本概念。</p>
+<p>Life is not a race. Even if life is a race, it is a race in which the process is more important than the result.</p>
 </blockquote>
-<p>在凸优化中，凸集是重要的基本概念，为此，引入以下概念</p>
-<hr>
-<h3 id="直线的向量表示"><a href="#直线的向量表示" class="headerlink" title="直线的向量表示"></a>直线的向量表示</h3><p>给定二维平面上两定点：$\mathbf{a}(u_1,v_1),\mathbf{b}(u_2,v_2)$，则直线AB可以表示为<br>$$\vec{x}=\theta\cdot\vec{a}+(1-\theta)\cdot\vec{b},\ \theta\in R$$<br>若将$\theta$的范围限制到$[0,1]$，则表示线段AB</p>
-<a id="more"></a>
-<hr>
-<h3 id="几何体的向量表示"><a href="#几何体的向量表示" class="headerlink" title="几何体的向量表示"></a>几何体的向量表示</h3><p>以上的向量表示方法可以推广至高维：</p>
-<ul>
-<li>三维平面：$\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\theta_3\cdot\vec{a_3}, \ \ \theta_1+\theta_2+\theta_3=1, \theta_1,\theta_2,\theta_3\in R$</li>
-<li>三角形： $\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\theta_3\cdot\vec{a_3}, \ \ \theta_1+\theta_2+\theta_3=1, \theta_1,\theta_2,\theta_3\in [0,1]$</li>
-<li>超平面： $\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\cdots+\theta_k\cdot\vec{a_k}, \ \ \theta_1+\theta_2+\cdots+\theta_k=1, \theta_1,\theta_2,\cdots,\theta_k\in R$</li>
-<li>超几何体：$\vec{x}=\theta_1\cdot\vec{a_1}+\theta_2\cdot\vec{a_2}+\cdots+\theta_k\cdot\vec{a_k}, \ \ \theta_1+\theta_2+\cdots+\theta_k=1, \theta_1,\theta_2,\cdots,\theta_k\in [0,1]$</li>
-</ul>
-<hr>
-<h3 id="仿射集"><a href="#仿射集" class="headerlink" title="仿射集"></a>仿射集</h3><p>以上的表示方法可以引入几何学中一个重要的概念，仿射集（Affine set）：</p>
-<p> <strong>定义</strong>：通过集合$C$的任意两个不同点的直线仍在集合$C$内，则称集合$C$是仿射集</p>
-<p> $$\forall x_1,x_2\in C,\forall \theta\in R, x=\theta\cdot x_1+(1-\theta)\cdot x_2\in C$$</p>
-<p>仿射集的例子：</p>
-<ul>
-<li>直线、平面</li>
-<li>超平面：$\{x|Ax=b\}$</li>
-</ul>
-<hr>
-<h3 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h3><p>下面可以引入凸集概念，其定义有两种形式，两种形式是等价的</p>
-<ul>
-<li>两点定义：集合$C$内任意两点间的线段均在集合$C$内，则称集合$C$是凸集<br>$$\forall x_1,x_2\in C, \forall\theta\in[0,1], x=\theta\cdot x_1+(1-\theta)\cdot x_2\in C$$</li>
-<li>$k$点定义：<br>$$\forall x_1, x_2, \cdots, x_k \in C, \forall \theta_{i}\in [0,1], \sum_{i=1}^{k}\theta_{i}=1, x=\sum_{i=1}^{k}\theta_{i} x_i \in C$$</li>
-</ul>
-<p>根据仿射集和凸集的定义，我们知道：仿射集一定是凸集</p>
-<hr>
-<h3 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h3><p><strong>定义</strong>：集合C的所有点的凸组合形成的集合，叫做集合$C$的凸包（Convex hull）</p>
-<p>  $$\mathbf{conv} \ \  C =\{\sum_{i=1}^{k}\theta_{i}x_{i}|x_{i}\in C, \theta_i \geq 0, \sum_{i=1}^{k}\theta_i =1\}$$</p>
-<p>推论：集合凸包是能包含$C$的最小凸集</p>
-<p><img src="http://oky0w68xw.bkt.clouddn.com/convex.png" alt="convex hull"></p>
-<hr>
-<h3 id="超平面和半空间"><a href="#超平面和半空间" class="headerlink" title="超平面和半空间"></a>超平面和半空间</h3><ul>
-<li>超平面（hyperplane）<br>$$<br>\{x\ | \ a^{T}x=b\}<br>$$<br>$a$是其法向量</li>
-<li>半空间（halfspace）<br>$$<br>\{x\ | \ a^{T}x\leq b\}\quad\quad<br>\{x\ | \ a^{T}x\geq b\}<br>$$<br><img src="http://oky0w68xw.bkt.clouddn.com/hyperplane.png" alt="hyperplane"></li>
-</ul>
-<hr>
-<h3 id="欧式球和椭球"><a href="#欧式球和椭球" class="headerlink" title="欧式球和椭球"></a>欧式球和椭球</h3><ul>
-<li>欧式球<br>$$<br>B(x_c,r)=\{x \ |\ \Vert x-x_c\Vert_2 \leq r \}=\{x \ |(x-x_c)^{T}(x-x_c) \leq r^2 \}<br>$$<br>​</li>
-<li>椭球<br>$$<br>E=\{x\ | (x-x_c)^T P(x-x_c)\leq r^2\}, 其中P为对称正定阵<br>$$</li>
-</ul>
-<hr>
-<h3 id="范数球和范数锥"><a href="#范数球和范数锥" class="headerlink" title="范数球和范数锥"></a>范数球和范数锥</h3><p>我们可以将欧式空间的二范数进行推广，得到广义的范数几何体</p>
-<ul>
-<li>范数球（Norm Ball）<br>  $$<br>  B(x_c,r)=\{x \ |\ \Vert x-x_c\Vert \leq r \}<br>  $$</li>
-<li>范数锥（Norm Cone）<br>  $$<br>  \{(x,t) \ |\ \Vert x\Vert \leq t \}<br>  $$<br><img src="http://oky0w68xw.bkt.clouddn.com/norm_cone.png" alt="Norm cone"></li>
-</ul>
-<hr>
-<h3 id="多面体"><a href="#多面体" class="headerlink" title="多面体"></a>多面体</h3><p>引入以上概念后，我们可以如下去定义多面体（polyhedron）：</p>
-<p><strong>定义</strong>：多面体是有限个半空间和超平面的交集，即<br>$$\mathcal{P}=\{ a_j^Tx\leq b_j, j=1,2,\cdots,m,\ \  c_i^T x=d_i, i=1,2,\cdots,p \}$$</p>
-<ul>
-<li>仿射集(如超平面、直线)、射线、线段、半空间都是多面体</li>
-<li>多面体是凸集</li>
-<li>有界多面体叫<em>多胞形</em>（polytope）<br><img src="http://oky0w68xw.bkt.clouddn.com/polyherdon2.png" alt="polyhedron"></li>
-</ul>
-<hr>
-<h3 id="保凸运算"><a href="#保凸运算" class="headerlink" title="保凸运算"></a>保凸运算</h3><p>引入凸集的概念后，自然地想研究集合间的映射算子与凸集的关系，特别地是保持凸性的算子，即将凸集映射为凸集的算子，下面给出4个保凸算子（Operations that preserve convexity）</p>
-<ul>
-<li>集合的交运算（Intersection）<br>$$\bigcap_{\alpha\in\mathcal{A}}S_{\alpha}$$</li>
-<li>仿射变换（Affine functions）$$f(x)=Ax+b$$</li>
-<li><p>透视变换（Perspective functions）</p>
-<p><strong>定义</strong>：$$ P:\mathbf{R}^{n+1}\rightarrow\mathbf{R}^{n}, \ \mathbf{dom} \ P=\mathbf{R}^{n}\times R_{+}$$<br>$$(x_1,x_2,\cdots,x_n,t)\rightarrow(\frac{x_1}{t},\frac{x_2}{t},\cdots,\frac{x_n}{t}), t&gt;0$$<br>从代数角度，透视变换相当于对原向量进行标准化化使得最后一个分量值为1，并去掉了最后一个分量；从几何角度，三维平面内透视变换相当于小孔成像的原理，如下图所示<br><img src="http://oky0w68xw.bkt.clouddn.com/pinhole.png" alt="pin_hole"></p>
-</li>
-<li><p>线性分式变换（投射变换）（Linear-fractional functions）</p>
-<p><strong>定义</strong>：线性分式函数是仿射变换和透视变换的复合变换</p>
-</li>
-</ul>
-<p>$假设仿射变换\ g:\mathbf{R}^{n}\rightarrow\mathbf{R}^{m+1}$<br>$$ g(x)=\begin{bmatrix}A\\ c^{T}\end{bmatrix}x+\begin{bmatrix}b\\ d\end{bmatrix}$$<br>$\ 其中A\in \mathbf{R}^{m\times n},b\in\mathbf{R}^{m},c\in\mathbf{R}^{n},d\in\mathbf{R}$</p>
-<p>  $那么\ f:\mathbf{R}^{n}\rightarrow\mathbf{R}^{m}定义为f=P \circ g，即$<br>  $$f(x)=\frac{Ax+b}{c^Tx+d},\quad \mathbf{dom}\ f=\{x|c^Tx+d&gt;0\}$$<br>  <strong>投影理解</strong>（Projective Interpretation）:<br>  我们可以将线性分式变换写成矩阵形式，记<br>  $$Q=\left[\begin{matrix}<br>  A &amp; b\\<br>  c^T &amp; d<br>  \end{matrix}\right]\in\mathbf{R}^{(m+1)\times(n+1)}<br>  $$<br>将$\ Q\ $乘上$(x,1)$可以得到$\ Q(x,1)=(Ax+b,c^Tx+d)$，再通过对最后一个分量标准化得到$\ \left(\ f(x),1\ \right)\ $. 定义如下从$R^{n}$的元素到$R^{n+1}$中的集合的算子$$\mathcal{P}(x)=\{t\cdot(x,1)|t&gt;0\}$$，则线性分式变换$f$可以写作<br>$$f(x)=\mathcal{P}^{-1}(Q\mathcal{P}(x))$$<br>这是一个投影算子，下图给出一个例子<br><img src="http://oky0w68xw.bkt.clouddn.com/projective.png" alt="projective"></p>
-<hr>
-<h3 id="分割超平面"><a href="#分割超平面" class="headerlink" title="分割超平面"></a>分割超平面</h3><p><strong>定义</strong>：设$C$和$D$是两集合，若存在超平面$a^{T}x=b$使得，<br>$$\forall x\in C,a^Tx\leq b\ 且\  \forall x\in D, a^Tx\geq b$$<br>则称$\{x|a^Tx=b\}$为集合$C,D$的分割超平面（Separating hyperplane）</p>
-<p><strong>定理</strong>：两个<strong>不相交的凸集</strong>必定有分割超平面<br><img src="http://oky0w68xw.bkt.clouddn.com/separate.png" alt=""></p>
-<p>分割超平面的构造：两集合最近两点连线的中垂面</p>
-<p>最优分割超平面的构造（SVM：Support Vector Machine）</p>
-<hr>
-<h3 id="支撑超平面"><a href="#支撑超平面" class="headerlink" title="支撑超平面"></a>支撑超平面</h3><p><strong>定义</strong>：设集合$C$，$x_0$为$C$边界上的点。若存在$a\neq0$, 满足对任意$x\in C$,都有$a^Tx\leq a^Tx_0$成立,则称超平面$\{x|a^Tx\leq a^Tx_0\}$为集合$C$在点$x_0$处的支撑超平面（Supporting hyperplane）</p>
-<p><img src="http://oky0w68xw.bkt.clouddn.com/supporting.png" alt=""></p>
-<p><strong>定理</strong>：凸集边界上任意一点，均存在支撑超平面；反之，若一个闭的非中空（内部点不为空）集合，在边界上的任意一点均存在支撑超平面，则必为凸集</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/sky.jpg" alt=""></p>
+<p>最近感觉同级的人们情绪都很紧张，自己也不例外，毕竟在这个人生中可能比高三还要重要的阶段，每个人都会在无数的可能前暗自发愁。</p>
+<p>有朋友GPA不高，保不了研，成为了自习室的考研大军中的一员；有朋友为了争取最后的保研的机会，夜以继日地学习以在学期末取得好的成绩；出国党们，考着GT，刷着GPA，看着paper，做着实习……</p>
+<p>而我就是万千出国党中的一份子，背着可能一辈子也不会再用到的GRE单词，每天看着琦叔的励志鸡汤，每天单词、paper、codes充斥整个大脑。大概一星期前，刚开学的我，还踌躇满志，立志在这学期要拿得下GT，看得了paper，码得了代码，刷得了GPA。但现实总是残酷的，我发现我做不到6点起床背单词，做不到上课精神饱满，做不到一星期3篇paper的阅读……</p>
+<blockquote>
+<p>人在学期初，总是能极大地高估自己的潜力的。</p>
+</blockquote>
+<p>于是在这个星期日，脑子和身子还是罢了工，昏昏沉沉睡了很久。</p>
+<blockquote>
+<p>人醒了，总是能想通很多事。</p>
+</blockquote>
+<p>其实，往往疲惫的感觉，更多地来源于自己和自己过不去。别人一天能背300个单词，而自己一天200个都很难背下来；别人能看数不尽的paper，甚至本科都能发得了paper，而自己却很多paper都看不懂……极大多数的疲惫感，来自于和别人的比较。</p>
+<blockquote>
+<p>人总是会盯住别人的闪光点，认为自己一无是处，而这种一无是处的错觉就会给你的精神以及身体带来消极的影响。</p>
+</blockquote>
+<p>所以最近我和许多学弟学妹交流，我说的最多的一句话就是：“大学中厉害的人太多了，如果你总是看着厉害的人而否定自己，你永远会止步不前，成为不了别人眼中厉害的人。”</p>
+<p>写下这篇随笔，只是想在开学初警告自己，专注走自己的路，做到无怨无悔即是好。</p>
 
       
     </div>
@@ -517,9 +447,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数学/" rel="tag"># 数学</a>
+            <a href="/tags/随笔/" rel="tag"># 随笔</a>
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+            <a href="/tags/吐槽/" rel="tag"># 吐槽</a>
           
         </div>
       
@@ -528,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/30/hello-world/" rel="next" title="Oliver's Notes 新开始">
-                <i class="fa fa-chevron-left"></i> Oliver's Notes 新开始
+              <a href="/2017/03/06/python-graph/" rel="next" title="Python中的图模型实现">
+                <i class="fa fa-chevron-left"></i> Python中的图模型实现
               </a>
             
           </div>
@@ -537,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/10/convex-optimization2/" rel="prev" title="凸优化（二）：凸函数的基本概念">
-                凸优化（二）：凸函数的基本概念 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,10 +481,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/06/convex-optimization1/"
-     data-title="凸优化（一）：凸集的基本概念"
+        <div class="ds-share flat" data-thread-key="2017/03/12/juniorthinking/"
+     data-title="写在大三下"
      data-content=""
-     data-url="http://yoursite.com/2017/02/06/convex-optimization1/">
+     data-url="http://yoursite.com/2017/03/12/juniorthinking/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -585,8 +511,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/06/convex-optimization1/"
-           data-title="凸优化（一）：凸集的基本概念" data-url="http://yoursite.com/2017/02/06/convex-optimization1/">
+      <div class="ds-thread" data-thread-key="2017/03/12/juniorthinking/"
+           data-title="写在大三下" data-url="http://yoursite.com/2017/03/12/juniorthinking/">
       </div>
     
   </div>
@@ -610,17 +536,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://p7.qhimg.com/t015cb9ea865cb21129.jpg"
@@ -738,22 +655,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#直线的向量表示"><span class="nav-number">1.</span> <span class="nav-text">直线的向量表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几何体的向量表示"><span class="nav-number">2.</span> <span class="nav-text">几何体的向量表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仿射集"><span class="nav-number">3.</span> <span class="nav-text">仿射集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凸集"><span class="nav-number">4.</span> <span class="nav-text">凸集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凸包"><span class="nav-number">5.</span> <span class="nav-text">凸包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超平面和半空间"><span class="nav-number">6.</span> <span class="nav-text">超平面和半空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧式球和椭球"><span class="nav-number">7.</span> <span class="nav-text">欧式球和椭球</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#范数球和范数锥"><span class="nav-number">8.</span> <span class="nav-text">范数球和范数锥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多面体"><span class="nav-number">9.</span> <span class="nav-text">多面体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保凸运算"><span class="nav-number">10.</span> <span class="nav-text">保凸运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割超平面"><span class="nav-number">11.</span> <span class="nav-text">分割超平面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支撑超平面"><span class="nav-number">12.</span> <span class="nav-text">支撑超平面</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -1034,26 +935,6 @@
 
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
