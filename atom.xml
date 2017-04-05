@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-12T16:16:03.000Z</updated>
+  <updated>2017-04-05T11:55:33.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用C++实现的简单的小游戏：Adventure</title>
+    <link href="http://yoursite.com/2017/04/04/OOPHW-3/"/>
+    <id>http://yoursite.com/2017/04/04/OOPHW-3/</id>
+    <published>2017-04-04T14:26:37.000Z</published>
+    <updated>2017-04-05T11:55:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oky0w68xw.bkt.clouddn.com/oop3.png" alt=""></p>
+<p>这周，面向对象程序设计（Object Oriented Programming）留了一个有意思的C++的小游戏作业。游戏介绍如下：</p>
+<a id="more"></a>
+<h2 id="Adeventure"><a href="#Adeventure" class="headerlink" title="Adeventure"></a>Adeventure</h2><h3 id="Story"><a href="#Story" class="headerlink" title="Story"></a>Story</h3><p>Adventure is a CLI game. The player has to explore in the castle with many levels and a lot of rooms. The task of the player is to find a room where the princess is prisoned and take her leave the castle. There are many types of rooms, and each type of room has different types of exits. Note that there’s a monster in one of the rooms, which the exact location is not able to be aware. But once the player meets a monster, the game is over.</p>
+<p>When the game starts, the player is at the lobby of the castle. Then the program shows information about the lobby：name of the room, how many exits are there, and names of all exits (e.g.: “east”, “south”, “up”), like:</p>
+<pre><code>Welcome to the lobby. There are 3 exits as: east, west and up.
+Enter your command:
+</code></pre><p>The player then can input “go” followed by the name of one exit to enter the room connected with that door, like:</p>
+<pre><code>go east
+</code></pre><p>The player goes into the room to the east. The program shows the information about that room, like what happened in the lobby just now. And the player may input command to choose another room.</p>
+<p>Once the player enters a room with a monster, the program shows a message and game over. Once the player enters the room of princess, the program shows a message about the princess, and the princess is going to leave with the player. The player then has to find their way out the castle. The only way to leave the castle is via the lobby.<br>All printed messages and user input are in English to simplify the code.</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><ol>
+<li>At least three different kinds of room;</li>
+<li>At least five rooms;</li>
+<li>The room with monster or princess is randomly set.</li>
+</ol>
+<p>简单说，就是一个王子在城堡中救公主且不能碰到怪兽。由于自己是C++的初学者，所以写起来还是有些费劲，不过在写代码的过程中，自己还是收益很多的，主要由纠正了自己对OOP的认知，学习了如何搭建架构（画类图）。</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/Adventure%20copy.png" alt=""></p>
+<p>终于明白了真正的OOP是可以做到main函数中只有2句话的！</p>
+<p>我的游戏中，设置了8个房间，类似2阶魔方的双层构造，怪兽和公主所在的房间随机。仍还在考虑如何将地图变得更加复杂，有想法的同学欢迎交流。</p>
+<p>下面是游戏运行的截图：</p>
+<p><img src="http://oky0w68xw.bkt.clouddn.com/adventure.png" alt=""></p>
+<p>运气不错，找了几次后就找到了公主，直接按照方向相反就可以回到大厅，成功逃脱城堡！</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li><p>了解了OOP的精髓：</p>
+<p>可以封装的尽量封装，虽然对于这次作业有过度封装的嫌疑（如Player类、Room类），但是这种封装方便游戏下一次的优化和更新。</p>
+</li>
+<li><p>STL中的vector, map的使用更加了解</p>
+</li>
+</ol>
+<ol>
+<li><p>学会了简单的makefile</p>
+<p>这次写的makefile，作为一个Geek，是不能总在IDE中写程序的</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">objs = Map.o Player.o Room.o Solution.o main.o</div><div class="line">CPPFLAGS = -std=c++14 </div><div class="line"></div><div class="line">install : $(objs)</div><div class="line">	g++ -o adv $(objs)</div><div class="line"></div><div class="line">clean :</div><div class="line">	rm $(objs)</div></pre></td></tr></table></figure>
+<h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><p>游戏貌似过于简单，挺想增加一个难度和乐趣的，比如在某个房间里多加一把宝剑，可以干掉怪兽一次，但是怪兽可以无限次复活而且复活的房间随机。另外地图的确可以做的更复杂一些。</p>
+<p>具体的代码可以参见我的Github</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oky0w68xw.bkt.clouddn.com/oop3.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这周，面向对象程序设计（Object Oriented Programming）留了一个有意思的C++的小游戏作业。游戏介绍如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Codes" scheme="http://yoursite.com/categories/Codes/"/>
+    
+    
+      <category term="OOP" scheme="http://yoursite.com/tags/OOP/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>写在大三下</title>
