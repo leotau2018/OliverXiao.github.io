@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-05T11:55:33.000Z</updated>
+  <updated>2018-02-03T09:16:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Probability Thoery Review</title>
+    <link href="http://yoursite.com/2018/02/02/Probability-Review/"/>
+    <id>http://yoursite.com/2018/02/02/Probability-Review/</id>
+    <published>2018-02-02T07:08:08.000Z</published>
+    <updated>2018-02-03T09:16:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[The is my notes in preparation of my PhD Admission interview that record the structure of probability theory.]</p>
+<p>The subject of probability theory is the mathematical analysis of random events, that is, of those empirical phenomena which do not have deterministic regularity but possess some statistical regularity.</p>
+<a id="more"></a>
+<hr>
+<h3 id="Probability-Space"><a href="#Probability-Space" class="headerlink" title="Probability Space"></a>Probability Space</h3><p>A probability space contains three basic elements:</p>
+<ul>
+<li><p>The Sample Space $\Omega$,  which is the set of all sample points $\omega$</p>
+</li>
+<li><p>The $\sigma$ - algebra $\mathcal{F}$ of events, which is a family of $\Omega$ subsets satisfying:</p>
+<ol>
+<li>$\Omega \in \mathcal{F}$;</li>
+<li>If $A\in \mathcal{F}$, then $\bar{A}\in \mathcal{F}$;</li>
+<li>If $A_1, A_2, …, A_n, … \in \mathcal{F}$, then  $\cup_{n=1}^{\infty}A_{n}\in\mathcal{F}$.</li>
+</ol>
+<p>$\mathcal{F}$ statisfying the above three hypotheses is termed as $\sigma$ - algebra in $\Omega$ ant the elements of $\mathcal{F}$ are also called the elements.</p>
+</li>
+<li><p>The probability $P$, which is a real function defined on $\mathcal{F}$: $A\in\mathcal{F}\rightarrow P(A)$, satistisfying</p>
+<ol>
+<li>Non-negativity: $P(A)\geq 0,  \forall A\in\mathcal{F}$;</li>
+<li>Normalization: $P(\Omega) = 1$;</li>
+<li>Countable Addititivity: If $A_1, …, A_n, ….$ are mutually disjoint events, then $$P(\sum_{n=1}^{\infty} A_n) = \sum_{n=1}^{\infty} P(A_n)$$. (P.S. The probability measure is continuous, deduced by the  Countable Addititivity)</li>
+</ol>
+<p>In terms of measure theory, probability is a normed measure defined on a $\sigma$ - algebra.</p>
+</li>
+</ul>
+<p>The triple $(\Omega, \mathcal{F}, P)$ is called a probability space.</p>
+<hr>
+<h3 id="Random-Variables"><a href="#Random-Variables" class="headerlink" title="Random Variables"></a>Random Variables</h3><p>Suppose that $\xi(\omega)$ is a real function defined in a probability space $(\Omega, \mathcal{F}, P)$ and that for any Borel set $B$<br>$$<br>\xi^{-1}(B) := \{\omega: \xi(\omega) \in B \}<br>$$<br>Then we can say that $\xi$ is a random variable, and that $\{P(\xi(\omega)\in B)\} \in \mathcal{F}$, is a prabability distribution associated with $\xi$.</p>
+<p>The distribution function is a complete description of a random variable.</p>
+<p>In function theory, we call the function $\xi$ satistisfying the above definition to be measurable with respect to the $\sigma$ - algebra $\mathcal{F}$.</p>
+<hr>
+<h3 id="Numerical-Characteristics"><a href="#Numerical-Characteristics" class="headerlink" title="Numerical Characteristics"></a>Numerical Characteristics</h3><ul>
+<li>Mathematical Expectation</li>
+<li>Variance, Covariance, Correlation Coefficient, Moment</li>
+</ul>
+<p>( <strong>Chebyshev’s Inequality</strong>: Assume that the random variable $\xi$ has variance, then it follows for any given $\varepsilon &gt; 0$ that $P(|\xi-E(\xi)|\geq \varepsilon) \leq \frac{Var(\xi)}{\varepsilon^2}$. )</p>
+<hr>
+<h3 id="Characteristic-Functions"><a href="#Characteristic-Functions" class="headerlink" title="Characteristic Functions"></a>Characteristic Functions</h3><p>Generally speaking, the numerical characateristics cannot completely determine the distribution function of a random variable. The concept of characteristics function is introduced to completely determine the distribution function and possesses nice properties as well.</p>
+<p>Suppose $\xi$ is a real random variable, we call<br>$$<br>f(t) = E(e^{it\xi}), \quad -\infty &lt; t &lt; \infty<br>$$</p>
+<p>the characteristics function of $\xi$.</p>
+<ul>
+<li><p>Property</p>
+<ol>
+<li>$|f(t)|\leq f(0) = 1$, $f(-t)=\overline{f(t)}$</li>
+<li>$f(t)$ is uniformly continuous on $(-\infty, \infty)$</li>
+<li>$f(t)$ is nonnegative definite.</li>
+<li>Assume that $\xi_1, …, \xi_n$ are independent with characteristics functions $f_1(t), …, f_n(t)$ respectively. Let $\eta = \xi_1 + … + \xi_n$, then $f_{\eta}(t) = f_1(t)f_2(t)\cdots f_n(t)$.</li>
+<li>If $E(\xi^n)$ exists, then $f(t)$ is differentiable of $n$ order, and when $k\leq n$, $f^{(k)}(0)=i^{k}E(\xi^k)$.</li>
+<li>Let $\eta = a\xi + b$, where a, b are arbitrary constants. Then $f_{\eta}(t) = e^{ibt}f(at)$.</li>
+</ol>
+</li>
+<li><p>Bochner-Khinchine Theorem</p>
+<p>The funtion $f(t)$ is characteristics function if and only if $f(t)$ is nonnegative definite, continuous and $f(0)=1$.</p>
+</li>
+<li><p>Inverse Formula</p>
+<p>Suppose that $f(t)$ is a characteristic function correpsonding to distribution function $F(x)$. Let $x_1, x_2$ be two continuity points of $F(x)$, then<br>$$<br>F(x_2)- F(x_1) = \lim_{T\rightarrow \infty}\frac{1}{2\pi}\int_{-T}^{T}\frac{e^{-itx_1}- e^{-itx_2}}{it}f(t)dt<br>$$</p>
+</li>
+<li><p>Theorem of Uniqueness</p>
+<p>A distribution function  can be uniquely determined by its characteristic function.</p>
+</li>
+</ul>
+<ul>
+<li><p>Inverse Fourier Transform</p>
+<p>Suppose that $f(t$ is a characteristic function and $\int_{-\infty}^{\infty}|f(t)| dt &lt; \infty$, then the derivative of the correpsonding distribution function $F(x)$ exits and it continuous. Moreover</p>
+<p>$$<br>F’(x)= \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-itx}f(t)dt<br>$$</p>
+</li>
+</ul>
+<hr>
+<h3 id="Probability-Limit-Theorems"><a href="#Probability-Limit-Theorems" class="headerlink" title="Probability Limit Theorems"></a>Probability Limit Theorems</h3><p>—TO BE CONTINUED—</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[The is my notes in preparation of my PhD Admission interview that record the structure of probability theory.]&lt;/p&gt;
+&lt;p&gt;The subject of probability theory is the mathematical analysis of random events, that is, of those empirical phenomena which do not have deterministic regularity but possess some statistical regularity.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="概率论" scheme="http://yoursite.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>用C++实现的简单的小游戏：Adventure</title>
