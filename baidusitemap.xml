@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/24/seminar1/</loc>
+    <lastmod>2018-03-24T15:16:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Seminar (3.25) Notes</title>
+        <pubTime>2018-03-24T15:07:29.000Z</pubTime>
+        
+        <tag>Probability</tag>
+         
+         
+           
+             
+              <breadCrumb title="Seminar" url="http://yoursite.com/categories/Seminar/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/02/02/Probability-Review/</loc>
     <lastmod>2018-02-03T09:16:13.000Z</lastmod>
     <data>
